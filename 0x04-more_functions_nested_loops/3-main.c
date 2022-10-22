@@ -7,6 +7,6 @@
  */
 int main(void)
 {
-rint_numbers();
+print_numbers();
 return (0);
 }
