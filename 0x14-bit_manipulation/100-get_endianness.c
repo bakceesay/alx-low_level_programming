@@ -1,12 +1,17 @@
 #include "main.h"
 /**
- * get_endianness - return the endianness of the machine
- *
- * Return: 0 for big endian, 1 for little endian
+ * get_endianness - get the endiannes of the arch
+ * Description: get the endiannes of the arch
+ * section header: the header of this function is holberton.h
+ * Return: 1 in little indian - 0 in big indian.
  */
+
 int get_endianness(void)
 {
-	int n = 1;
+	unsigned int i = 1;
+	char *c = (char *)&i;
 
-	return (*((char *) &n) + '0');
+	if (*c)
+		return (1);
+	return (0);
 }
